@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+  display: flex;
+  min-height: 70vh;
+  flex-direction:column;
+
+}
+.section {
+
+    font-size: 100px;
+    flex:1;
+}
+.header {
+    background-color: black; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.header h1 {
+font-family: Yrsa;
+font-style: normal;
+font-weight: normal;
+font-size: 85px;
+line-height: 79px;
+padding: 10% 10%;
+
+
+color: #FFFFFF;
+/*position: relative;  gdy przeskakiwało, zdjęcie nachodziło na h1 jakby nie widziało że pozycja jest zmieniona
+width: 651px;
+height: 313px;
+left: 258px;
+top: 187px; */
+}
+.hd {
+    flex:1;
+   
+}
+.header .img1 {
+    /*position:relative;
+    width: auto;
+  
+    width:auto; */
+    background-image: url(children.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    padding-left: 20%;
+    /*border: 10px solid red; */
+    
+}
+
+.About_me {
+    background-color: #04042A;
+    display: flex;  
+    /*justify-content: space-around; nie działa */
+}
+.About_me .img2 {
+    background-image: url(smiech2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 90vh;
+    padding-left: 10%;
+}
+p {
+font-family: Yrsa;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 2;
+
+color: #FFFFFF;
+
+}
+.About_me p {
+    padding: 10% 10% 10% 0;
+}
+.ab_item {
+    flex:1;
+}

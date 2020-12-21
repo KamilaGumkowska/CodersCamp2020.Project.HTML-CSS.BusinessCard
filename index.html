@@ -8,20 +8,98 @@
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
     <meta name="description" content="CodersCamp to darmowy, otwarty kurs programowania webowego we Wrocławiu. Sprawdź, czego nauczysz się na CodersCamp i spróbuj swoich sił w branży IT!">
     <link rel="stylesheet" href="mystyle.css">
-
+    <script src="https://kit.fontawesome.com/d5d4c8329a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yrsa:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="container">
-    <div class="section header">
-        <h1 class="hd">  Kreatywne<br>lekcje<br>gry<br>na pianine</h1>
-        <div class="hd img1"></div>       
-    </div>
-    <div class="section About_me">
-        <div class="ab_item img2"></div>
-        <p class="ab_item">Nazywam się Kamila Gumkowska. Jestem absolwentką Państwowej Szkoły Muzycznej II stopnia w klasie fortepianu. Aktualnie uczęszczam do Szkoły Muzyki Nowoczesnej, gdzie spełniam swoje marzenia i uczę się robić swoje własne kompozycje.</p>
-    </div>
-    <div class="section Mission">3</div>
+<div class="wrapper">
+    <nav class="main-nav">
+        <ul class="sticky">
+            <li> <a href="#first">O mnie</a></li>
+            <li> <a href="#second">Oferta</a></li>
+            <li> <a href="#third">Galeria</a></li>
+            <li> <a href="#fourth">Kontakt</a></li>
+        </ul>
+    </nav>
+    <section class="top-container">
+        <header class="showcase">
+            <h1>Kreatywne <br> lekcje <br>gry <br>na pianinie</h1>  
+           <br>
+                   
+            <a href="#second" class="btn">Sprawdź ofertę</a>
+        </header>
+        <!--img src="children.jpg" alt=""-->
+        <div class="bg">kjakskjaksjkajskajskjaksjakjskajskj</div>
+    </section>
+    <section id="first" class="aboutMe">
+        
+        <img src="smiech2.jpg" alt="">
+        <div class="description">
+            <h2 >O mnie</h2>
+            <p>Nazywam się Kamila Gumkowska.
+                Jestem absolwentką Państwowej Szkoły Muzycznej II stopnia w klasie fortepianu. Aktualnie uczęszczam do Szkoły Muzyki Nowoczesnej, gdzie spełniam swoje marzenia i uczę się robić swoje własne kompozycje.</p>
+        </div>
+    </section>
+    <section id="second" class="boxes">
+        <div class="hh">
+            <h2>Oferta</h2>
+        </div>
+        <div class="box">
+            <i class="fas fa-music fa-4x"></i>
+            <h3>Nauka nut</h3>
+            <p>Będziemy uczyć się nutek w formie
+                zabawy. Grając w gry dzieci 
+                najlepiej zapamiętują i nawet nie 
+                wiedzą kiedy, to się stało, że potrafią
+                przeczytać zapis nutowy i zagrać go
+                na pianinie. <br> </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-pencil-alt fa-4x"></i>
+            <h3>Pisanie piosenek</h3>
+            <p>Będziemy tworzyć własne piosenki.
+                Dzieci mają nieskończone pokłady kreatywności. Trzeba pokazać im, że muzyka to też przestrzeń to tworzenia a nie odtwarzania. Na lekcji razem postaramy się stworzyć słowa i prostą melodię.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-assistive-listening-systems fa-4x"></i>
+            <h3>Kształcenie Słuchu</h3>
+            <p>“Dobre ucho” jest nieodłącznym elementem dobrej gry. Dlatego od początku warto rozwijać słuch Twojego dziecka. Na lekcjach robimy to podczas zabaw ruchowo rytmicznych albo gier typu “Jaka to melodia”</p>
+        
+        
+        </div>
+    </section>
+    <section id="third" class="portfolio">
+        
+        <img src="recital.jpg" alt="">
+        <img src="dyp3.PNG" alt="">
+        <img src="rec2.jpg"  alt="">
+        <img src="rec3.jpg"   alt="">
+        
+        
+        <img src="dyp1.PNG"  alt="">
+        <img src="dyp2.PNG" alt="">        
+    </section>
+    <section id="fourth" class="form">
+        <div class="formDesc">Masz jakieś pytania? <br><br>
+            A może chcesz umówić się na lekcję? <br><br>
+            Napisz do mnie wiadomość!</div>
+        <form method="post" action="/send_form.php" id="contact_form">
+                <div><label for="name">Imię i nazwisko</label></div>
+                <div><input type="text" name="name" id="name" class="formField" /></div>
+                <div><label for="phone">Numer telefonu</label></div>
+                <div><input type="text" name="phone" id="phone" class="formField" /></div>
+                <div><label for="email">Adres email</label></div>
+                <div><input type="text" name="email" id="email" class="formField" /></div>
+                <div><label for="message">Treść wiadomości</label></div>
+                <div><textarea name="message" id="message" class="formField"></textarea></div>
+                <div><button id="sendBtn">Wyślij</button></div>
+        </form>
+
+    </section>
 </div>
+<!--wrapper ends-->
+
     </body>
     </html>

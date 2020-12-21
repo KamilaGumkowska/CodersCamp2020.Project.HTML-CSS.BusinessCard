@@ -1,83 +1,253 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding:0;
 }
-.container {
-  display: flex;
-  min-height: 70vh;
-  flex-direction:column;
-
+body {
+    color: white;
+    background-color: black;
+    line-height: 1.4;
+    font-family: 'Yrsa', serif;
 }
-.section {
-
-    font-size: 100px;
-    flex:1;
-}
-.header {
-    background-color: black; 
-    display: flex;
-    flex-wrap: wrap;
-}
-.header h1 {
-font-family: Yrsa;
-font-style: normal;
-font-weight: normal;
-font-size: 85px;
-line-height: 79px;
-padding: 10% 10%;
 
 
-color: #FFFFFF;
-/*position: relative;  gdy przeskakiwało, zdjęcie nachodziło na h1 jakby nie widziało że pozycja jest zmieniona
-width: 651px;
-height: 313px;
-left: 258px;
-top: 187px; */
+.aboutMe {
+    background-color: #04042A;
 }
-.hd {
-    flex:1;
+.btn {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-image: linear-gradient(#DF8C2B, #F7C419); 
+    color: black;
+}
+.btn:hover {
+    background-image: linear-gradient(#59D6DE, #355EBD );
+}
+img {
+   
+   max-width: 100%;
+   overflow: hidden;
+   max-height: 90%;
+   
    
 }
-.header .img1 {
-    /*position:relative;
-    width: auto;
-  
-    width:auto; */
-    background-image: url(children.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 100vh;
-    padding-left: 20%;
-    /*border: 10px solid red; */
+.bg {
+    width: 100%;
+    min-height: 250px;
+    background-image: url("children.jpg");
+    background-size: cover;
+    background-position: center;
+   
+    overflow: hidden;
+} 
+.bg:hover {
+    animation-name:myAnimation;
     
 }
 
-.About_me {
-    background-color: #04042A;
-    display: flex;  
-    /*justify-content: space-around; nie działa */
+.wrapper {
+    display: grid;  
+    
+} 
+.main-nav {
+    width: 100vw;
 }
-.About_me .img2 {
-    background-image: url(smiech2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    height: 90vh;
-    padding-left: 10%;
+.main-nav ul {
+    display: grid;
+    grid-gap: 0px;  
+    margin: 2%;
+    list-style: none; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
-p {
-font-family: Yrsa;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 2;
+.main-nav li { 
+    border:white 2px solid;
+    background-color: black;
+    border-radius: 8px;
+    z-index: 100000;
+    
+}
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    display: block; 
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.main-nav li:hover {
+    background-image: linear-gradient(#DF8C2B, #F7C419); 
+    border: none;
+}
+.main-nav a:hover {
+color: black;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
 
-color: #FFFFFF;
+.top-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
+    grid-gap: 20px;
+    min-height: 70vh;
+    margin-top: 6rem;    
+}
+.showcase  {
+    display:grid;
+     align-items: center;
+     justify-items: center; 
+    
+     width: 100%;
+     height:100%; 
+   }
+   .top-container .btn {
+    
+    border-radius: 8px;
+    padding: 1rem;
+    
+    width: auto;  
+    vertical-align: middle;
+    position:relative;      
+}
+.aboutMe {
+    max-height: 90vh;
+    margin-top: 0px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4%;
+    padding: 3rem 0;
+ 
+    
+   
+}
+.aboutMe div {
+    width: 90%;
+   
+    margin-top: 0px;
+    font-size: 1.3rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+      
+}
+.boxes {
+    display: grid;
+    grid-gap: 30px;
+    min-height: 100vh;;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));    
+  }
+  .box  {
+     padding-top: 50px;
+      text-align: center;
+      display: grid;
+      grid-gap:15px;
+      font-size: 1.3rem;
+  }
+h1 {
+    font-size: 5rem;   
+}
+h2 {
+    font-size: 2rem;
+    color: #F7C419;
+}
+
+.box {
+    margin: 120px 0px; 
+    
+    
+}
+.boxes .hh  {
+    position:absolute;
+    display: block;
+    
+    width: 100%;
+    margin-bottom: 20px;
+    height: 70px;
+    
+}
+.hh h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size:5rem;
+    
+}
+.portfolio {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    margin: 120px;
+    margin-top: 5rem;
+}
+.box > i {
+    color: linear-gradient(#59D6DE, #355EBD );
+}
+.portfolio .hh  {
+    position:absolute;
+    display: block;
+    font-size: 4%;
+    
+    width: 100%;
+    margin-bottom: 20px;
+    height: 70px;
+    margin-bottom: 100px;
+    
+}
+.portfolio div {
+    font-size: 10rem;
+}
+.portfolio div {
+    background-color: black;
+    margin-bottom: 100px;
+}
+.portfolio h2 {
+    margin-bottom: 100px;  
+}
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-image: linear-gradient(#DF8C2B, #F7C419); 
+    padding: 5rem;
+    min-height: 70vh;
+    grid-gap: 50px;
+    font-size: 2rem;
+    justify-items: center;
 
 }
-.About_me p {
-    padding: 10% 10% 10% 0;
+.form .formDesc {
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    width: 70%;
+    padding: 30px;
+    text-align: center;
+    height: auto;
+    min-width: 400px;
+    margin: 0px auto 100px;
 }
-.ab_item {
-    flex:1;
+.form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 160px;
+    justify-items: center;
 }
+.form button {
+    background-image: linear-gradient(#59D6DE, #355EBD );
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin:30px 0px 100px 0px;   
+    color:white;
+}
+.form input {
+    width:100%;
+}
+
+
+
+

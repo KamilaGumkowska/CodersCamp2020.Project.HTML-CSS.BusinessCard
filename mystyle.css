@@ -18,6 +18,16 @@ body {
   font-size: 1.5rem;
   background-image: linear-gradient(#df8c2b, #f7c419);
   color: black;
+  text-align: center;
+  animation: animacja 2s ease-in-out 0s infinite alternate none;
+}
+@keyframes animacja
+{
+0% { border: white 3px solid;}
+100% { border: black 3px solid;}
+}
+.img:hover {
+    transform: scale(1.3);
 }
 .btn:hover {
   background-image: linear-gradient(#59d6de, #355ebd);
@@ -43,7 +53,7 @@ img {
 .main-nav ul {
   display: grid;
   grid-gap: 0px;
-  margin: 1rem;
+  margin: 0.5rem;
   list-style: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -63,7 +73,7 @@ img {
 }
 .main-nav li:hover {
   background-image: linear-gradient(#df8c2b, #f7c419);
-  border: none;
+  border: black solid 3px;
 }
 .main-nav a:hover {
   color: black;
@@ -78,25 +88,44 @@ img {
 .top-container {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   min-height: 85vh;
   margin: 0 auto;
   margin-top: 6rem;
   width: 100vw;
 }
+@media (max-width: 830px) {
+  .top-container {
+    grid-template-columns: 1fr;
+  }
+  .top-container h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 360px) {
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+  .aboutMe p {
+    font-size: 1rem;
+  }
+}
 .showcase {
   display: grid;
   align-items: center;
   justify-items: center;
-
   width: 100%;
   height: 100%;
+}
+.showcase h1 {
+  max-width: 100%;
 }
 .top-container .btn {
   border-radius: 8px;
   padding: 1rem;
-
+  align-self: center;
+  text-align: center;
   width: auto;
   vertical-align: middle;
   margin-bottom: 2rem;
@@ -126,11 +155,14 @@ img {
   display: grid;
   grid-gap: 70px;
   min-height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  );
   width: 100%;
   margin: 0 auto;
   padding: 0% 5%;
- width: 100vw;
+  width: 100vw;
   min-height: 75vh;
 }
 .box {
@@ -157,19 +189,23 @@ h2 {
 .portfolio {
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: 1fr 1fr;
   padding: 120px 5% 0px;
   margin: 0px auto;
   width: 100vw;
 }
-
-.box > i {
-  color: linear-gradient(#59d6de, #355ebd);
+@media (max-width: 800px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+  .boxes {
+    grid-template-columns: 1fr;
+  }
 }
+
 .portfolio img {
   margin: 0 auto;
   max-width: 100%;
-  min-width: 500px;
   align-self: center;
 }
 .portfolio div {
@@ -182,7 +218,7 @@ h2 {
 }
 .form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: 1fr 1fr;
   background-image: linear-gradient(#df8c2b, #f7c419);
   padding: 2rem;
   min-height: 70vh;
@@ -190,10 +226,15 @@ h2 {
   font-size: 2rem;
   justify-items: center;
   width: 95vw;
-  
-  
   border-radius: 20px;
   margin: 0 auto;
+  margin-top: 70px;
+}
+
+@media (max-width: 1100px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form .formDesc {
@@ -205,20 +246,35 @@ h2 {
   padding: 30px;
   text-align: center;
   height: auto;
-  min-width: 400px;
   margin: auto auto;
   border: black 3px solid;
   align-self: start;
-  
 }
 .form form {
   display: grid;
-  grid-gap:20px;
+  grid-gap: 20px;
   grid-template-columns: 1fr 3fr;
   min-width: 160px;
   justify-items: center;
   margin: 0 auto;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .form form {
+    grid-template-columns: auto 1fr;
+  }
+  form label {
+    font-size: 5vw;
+  }
+  .form .formDesc {
+    font-size: 6vw;
+    padding: 10px;
+    width: 95%;
+  }
+  .form {
+    padding: 0.5rem;
+    grid-gap: 50px;
+  }
 }
 .form button {
   background-color: white;
@@ -231,40 +287,73 @@ h2 {
 }
 .form input {
   width: 110%;
-  align-self:baseline;
+  align-self: baseline;
   border-radius: 20px;
   border: black 3px solid;
   padding: 5px;
-
-  
 }
 .form textarea {
-    height:100%;
-    grid-row-start: 4;
-    grid-row-end: span 2;
-    grid-column-start: 2; 
-    resize: none;
-    width: 90%;
-    border-radius: 20px;
-    border: black 3px solid;
-    padding: 5px;  
+  height: 100%;
+  grid-row-start: 4;
+  grid-row-end: span 2;
+  grid-column-start: 2;
+  resize: none;
+  max-width: 90%;
+  border-radius: 20px;
+  border: black 3px solid;
+  padding: 5px;
 }
 .fourth {
-    width:100%;
+  width: 100%;
 }
 .footer {
-    max-height: 20vh;
-    border-radius: 20px;
-    border: 3px white solid;
-    font-size: 60px;
-    text-align: center;
-    padding: 10px;
-    width: 95vw;
-    margin: 0 auto;
-   
-}
-.footer > * {
-    margin: 0 5%;
-    color:white;
+  max-height: 20vh;
+  border-radius: 20px;
+  border: 3px white solid;
+  font-size: 7vw;
 }
 
+.form button {
+  background-color: white;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: black 3px solid;
+  margin: 30px 0px 100px 0px;
+  color: black;
+}
+.form input {
+  width: 100%;
+  align-self: baseline;
+  border-radius: 20px;
+  border: black 3px solid;
+  padding: 5px;
+}
+.form textarea {
+  height: 100%;
+  grid-row-start: 4;
+  grid-row-end: span 2;
+  grid-column-start: 2;
+  resize: none;
+  max-width: 90%;
+  border-radius: 20px;
+  border: black 3px solid;
+  padding: 5px;
+}
+.fourth {
+  width: 100%;
+}
+.footer {
+  max-height: 20vh;
+  border-radius: 20px;
+  border: 3px white solid;
+  font-size: 7vw;
+  text-align: center;
+  padding: 10px;
+  width: 95vw;
+  margin: 0 auto;
+}
+.footer > * {
+  margin: 0 5%;
+  color: white;
+}

@@ -42,10 +42,11 @@
                 Jestem absolwentką Państwowej Szkoły Muzycznej II stopnia w klasie fortepianu. Aktualnie uczęszczam do Szkoły Muzyki Nowoczesnej, gdzie spełniam swoje marzenia i uczę się robić swoje własne kompozycje.</p>
         </div>
     </section>
-    <section id="second" class="boxes">
+    <section id="second">
         <div class="hh">
             <h2>Oferta</h2>
         </div>
+        <div class="boxes">
         <div class="box">
             <i class="fas fa-music fa-4x"></i>
             <h3>Nauka nut</h3>
@@ -66,12 +67,16 @@
             <i class="fas fa-assistive-listening-systems fa-4x"></i>
             <h3>Kształcenie Słuchu</h3>
             <p>“Dobre ucho” jest nieodłącznym elementem dobrej gry. Dlatego od początku warto rozwijać słuch Twojego dziecka. Na lekcjach robimy to podczas zabaw ruchowo rytmicznych albo gier typu “Jaka to melodia”</p>
+        </div>
         
         
         </div>
     </section>
-    <section id="third" class="portfolio">
-        
+    <section id="third">
+    <div class="hh">
+        <h2>Galeria</h2>
+    </div>
+    <div class="portfolio"> 
         <img src="recital.jpg" alt="">
         <img src="dyp3.PNG" alt="">
         <img src="rec2.jpg"  alt="">
@@ -79,13 +84,14 @@
         
         
         <img src="dyp1.PNG"  alt="">
-        <img src="dyp2.PNG" alt="">        
+        <img src="dyp2.PNG" alt="">  
+    </div>         
     </section>
     <section id="fourth" class="form">
         <div class="formDesc">Masz jakieś pytania? <br><br>
             A może chcesz umówić się na lekcję? <br><br>
             Napisz do mnie wiadomość!</div>
-        <form method="post" action="/send_form.php" id="contact_form">
+        <form method="post" action="/send_form.php" id="contact_form">            
                 <div><label for="name">Imię i nazwisko</label></div>
                 <div><input type="text" name="name" id="name" class="formField" /></div>
                 <div><label for="phone">Numer telefonu</label></div>
@@ -93,10 +99,17 @@
                 <div><label for="email">Adres email</label></div>
                 <div><input type="text" name="email" id="email" class="formField" /></div>
                 <div><label for="message">Treść wiadomości</label></div>
-                <div><textarea name="message" id="message" class="formField"></textarea></div>
-                <div><button id="sendBtn">Wyślij</button></div>
+                <textarea col="100" row="100" name="message" id="message" class="formField"></textarea>
+                <div><button id="sendBtn">Wyślij</button></div>              
         </form>
 
+    </section>
+    <section class="footer">
+        <a href="https://www.facebook.com/kamila.gumkowska/">
+            <i class="fab fa-facebook"></i>
+        </a>     
+        <i class="fab fa-github"></i>
+        <i class="fab fa-youtube"></i>
     </section>
 </div>
 <!--wrapper ends-->

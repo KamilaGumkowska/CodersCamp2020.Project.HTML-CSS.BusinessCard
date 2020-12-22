@@ -1,253 +1,270 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    color: white;
-    background-color: black;
-    line-height: 1.4;
-    font-family: 'Yrsa', serif;
+  color: white;
+  background-color: black;
+  line-height: 1.4;
+  font-family: "Yrsa", serif;
 }
-
 
 .aboutMe {
-    background-color: #04042A;
+  background-color: #04042a;
 }
 .btn {
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-image: linear-gradient(#DF8C2B, #F7C419); 
-    color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-image: linear-gradient(#df8c2b, #f7c419);
+  color: black;
 }
 .btn:hover {
-    background-image: linear-gradient(#59D6DE, #355EBD );
+  background-image: linear-gradient(#59d6de, #355ebd);
 }
 img {
-   
-   max-width: 100%;
-   overflow: hidden;
-   max-height: 90%;
-   
-   
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 90%;
 }
 .bg {
-    width: 100%;
-    min-height: 250px;
-    background-image: url("children.jpg");
-    background-size: cover;
-    background-position: center;
-   
-    overflow: hidden;
-} 
-.bg:hover {
-    animation-name:myAnimation;
-    
+  width: 100%;
+  min-height: 250px;
+  background-image: url("children.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
 }
 
 .wrapper {
-    display: grid;  
-    
-} 
-.main-nav {
-    width: 100vw;
+  display: grid;
 }
 .main-nav ul {
-    display: grid;
-    grid-gap: 0px;  
-    margin: 2%;
-    list-style: none; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+  display: grid;
+  grid-gap: 0px;
+  margin: 1rem;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.main-nav li { 
-    border:white 2px solid;
-    background-color: black;
-    border-radius: 8px;
-    z-index: 100000;
-    
+.main-nav li {
+  border: white 2px solid;
+  background-color: black;
+  border-radius: 8px;
+  z-index: 100000;
 }
 .main-nav a {
-    text-decoration: none;
-    color: white;
-    display: block; 
-    padding: 0.8rem;
-    text-align: center;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.1rem;
 }
 .main-nav li:hover {
-    background-image: linear-gradient(#DF8C2B, #F7C419); 
-    border: none;
+  background-image: linear-gradient(#df8c2b, #f7c419);
+  border: none;
 }
 .main-nav a:hover {
-color: black;
+  color: black;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100vw;
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0% 5%;
 }
 
 .top-container {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
-    grid-gap: 20px;
-    min-height: 70vh;
-    margin-top: 6rem;    
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
+  grid-gap: 20px;
+  min-height: 85vh;
+  margin: 0 auto;
+  margin-top: 6rem;
+  width: 100vw;
 }
-.showcase  {
-    display:grid;
-     align-items: center;
-     justify-items: center; 
-    
-     width: 100%;
-     height:100%; 
-   }
-   .top-container .btn {
-    
-    border-radius: 8px;
-    padding: 1rem;
-    
-    width: auto;  
-    vertical-align: middle;
-    position:relative;      
+.showcase {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+.top-container .btn {
+  border-radius: 8px;
+  padding: 1rem;
+
+  width: auto;
+  vertical-align: middle;
+  margin-bottom: 2rem;
 }
 .aboutMe {
-    max-height: 90vh;
-    margin-top: 0px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 4%;
-    padding: 3rem 0;
- 
-    
-   
+  max-height: 90vh;
+  margin-top: 0px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4%;
+  padding: 0% 5%;
+  padding: 3rem 0;
+  max-width: 100vw;
 }
 .aboutMe div {
-    width: 90%;
-   
-    margin-top: 0px;
-    font-size: 1.3rem;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-gap: 1rem;
-      
+  width: 90%;
+
+  margin-top: 0px;
+  font-size: 1.3rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 1rem;
 }
 .boxes {
-    display: grid;
-    grid-gap: 30px;
-    min-height: 100vh;;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));    
-  }
-  .box  {
-     padding-top: 50px;
-      text-align: center;
-      display: grid;
-      grid-gap:15px;
-      font-size: 1.3rem;
-  }
+  display: grid;
+  grid-gap: 70px;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+  margin: 0 auto;
+  padding: 0% 5%;
+ width: 100vw;
+  min-height: 75vh;
+}
+.box {
+  padding-top: 30px;
+  text-align: center;
+  display: grid;
+  grid-gap: 15px;
+  font-size: 1.3rem;
+  max-width: 100%;
+}
 h1 {
-    font-size: 5rem;   
+  font-size: 5rem;
 }
 h2 {
-    font-size: 2rem;
-    color: #F7C419;
+  font-size: 2rem;
+  color: #f7c419;
 }
 
-.box {
-    margin: 120px 0px; 
-    
-    
-}
-.boxes .hh  {
-    position:absolute;
-    display: block;
-    
-    width: 100%;
-    margin-bottom: 20px;
-    height: 70px;
-    
-}
 .hh h2 {
-    text-align: center;
-    margin-top: 50px;
-    font-size:5rem;
-    
+  text-align: center;
+  margin-top: 50px;
+  font-size: 5rem;
 }
 .portfolio {
-    display: grid;
-    grid-gap: 40px;
-    grid-template-columns: 1fr 1fr;
-    margin: 120px;
-    margin-top: 5rem;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  padding: 120px 5% 0px;
+  margin: 0px auto;
+  width: 100vw;
 }
+
 .box > i {
-    color: linear-gradient(#59D6DE, #355EBD );
+  color: linear-gradient(#59d6de, #355ebd);
 }
-.portfolio .hh  {
-    position:absolute;
-    display: block;
-    font-size: 4%;
-    
-    width: 100%;
-    margin-bottom: 20px;
-    height: 70px;
-    margin-bottom: 100px;
-    
+.portfolio img {
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 500px;
+  align-self: center;
 }
 .portfolio div {
-    font-size: 10rem;
+  background-color: black;
+  margin-bottom: 100px;
 }
-.portfolio div {
-    background-color: black;
-    margin-bottom: 100px;
-}
-.portfolio h2 {
-    margin-bottom: 100px;  
+.third h2 {
+  font-size: 2rem;
+  color: #f7c419;
 }
 .form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-image: linear-gradient(#DF8C2B, #F7C419); 
-    padding: 5rem;
-    min-height: 70vh;
-    grid-gap: 50px;
-    font-size: 2rem;
-    justify-items: center;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  background-image: linear-gradient(#df8c2b, #f7c419);
+  padding: 2rem;
+  min-height: 70vh;
+  grid-gap: 140px;
+  font-size: 2rem;
+  justify-items: center;
+  width: 95vw;
+  
+  
+  border-radius: 20px;
+  margin: 0 auto;
 }
+
 .form .formDesc {
-    font-size: 2rem;
-    background-color: white;
-    border-radius: 20px;
-    color: black;
-    width: 70%;
-    padding: 30px;
-    text-align: center;
-    height: auto;
-    min-width: 400px;
-    margin: 0px auto 100px;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+  width: 70%;
+  padding: 30px;
+  text-align: center;
+  height: auto;
+  min-width: 400px;
+  margin: auto auto;
+  border: black 3px solid;
+  align-self: start;
+  
 }
 .form form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-width: 160px;
-    justify-items: center;
+  display: grid;
+  grid-gap:20px;
+  grid-template-columns: 1fr 3fr;
+  min-width: 160px;
+  justify-items: center;
+  margin: 0 auto;
+  width: 100%;
 }
 .form button {
-    background-image: linear-gradient(#59D6DE, #355EBD );
-    font-size: 2rem;
-    padding: 10px 25px;
-    border-radius: 20px;
-    margin:30px 0px 100px 0px;   
-    color:white;
+  background-color: white;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: black 3px solid;
+  margin: 30px 0px 100px 0px;
+  color: black;
 }
 .form input {
+  width: 110%;
+  align-self:baseline;
+  border-radius: 20px;
+  border: black 3px solid;
+  padding: 5px;
+
+  
+}
+.form textarea {
+    height:100%;
+    grid-row-start: 4;
+    grid-row-end: span 2;
+    grid-column-start: 2; 
+    resize: none;
+    width: 90%;
+    border-radius: 20px;
+    border: black 3px solid;
+    padding: 5px;  
+}
+.fourth {
     width:100%;
 }
-
-
-
+.footer {
+    max-height: 20vh;
+    border-radius: 20px;
+    border: 3px white solid;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+    width: 95vw;
+    margin: 0 auto;
+   
+}
+.footer > * {
+    margin: 0 5%;
+    color:white;
+}
 
